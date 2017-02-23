@@ -9,8 +9,8 @@ import (
 )
 
 type forumThreads struct {
-	Threads []thread `json:"threads"`
-	ThreadsTotal uint `json:"threads_total"`
+	List []thread `json:"threads"`
+	Total uint `json:"threads_total"`
 	Links links
 }
 
@@ -21,16 +21,16 @@ type links struct {
 }
 
 type thread struct {
-	ThreadID uint `json:"thread_id"`
+	ID uint `json:"thread_id"`
 	ForumID uint `json:"forum_id"`
-	ThreadTitle string `json:"thread_title"`
-	ThreadViewCount uint `json:"thread_view_count"`
+	Title string `json:"thread_title"`
+	ViewCount uint `json:"thread_view_count"`
 	CreatorUserID uint `json:"creator_user_id"`
 	CreatorUsername string `json:"creator_username"`
-	ThreadCreateDate uint64 `json:"thread_create_date"`
-	ThreadUpdateDate uint64 `json:"thread_update_date"`
-	ThreadPostCount uint `json:"thread_post_count"`
-	ThreadTags map[string]string `json:"thread_tags"`
+	CreateDate uint64 `json:"thread_create_date"`
+	UpdateDate uint64 `json:"thread_update_date"`
+	PostCount uint `json:"thread_post_count"`
+	Tags map[string]string `json:"thread_tags"`
 	Links threadLinks `json:"links"`
 }
 

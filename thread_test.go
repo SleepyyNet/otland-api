@@ -11,7 +11,7 @@ func TestGetForumThreads(t *testing.T) {
 	}
 
 	// Check for any information
-	if len(threads.Threads) <= 0 {
+	if len(threads.List) <= 0 {
 		t.Fatal("Number of threads cant be empty")
 	}
 }
